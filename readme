@@ -1,0 +1,69 @@
+# Análise de Pontuações de Linguagens de Programação
+
+Este projeto realiza a análise e visualização das pontuações de três linguagens de programação (Python, Java e C++) ao longo do tempo, utilizando dados históricos. O código lê os dados de um arquivo CSV, realiza a análise exploratória dos dados e gera visualizações gráficas.
+
+## Estrutura do Projeto
+
+- `analise_pontuacoes.py`: Script principal contendo todo o código para leitura dos dados, análise e geração de gráficos.
+- `README.md`: Este arquivo, fornecendo uma visão geral do projeto.
+- `LICENSE`: Licença do projeto.
+- `.gitignore`: Arquivo para especificar quais arquivos e diretórios devem ser ignorados pelo Git.
+
+## Requisitos
+
+- Python 3.x
+- Bibliotecas:
+  - pandas
+  - matplotlib
+
+## Instalação
+
+1. Clone este repositório:
+    ```bash
+    git clone https://github.com/seu-usuario/analise-pontuacoes.git
+    cd analise-pontuacoes
+    ```
+
+2. Crie um ambiente virtual e ative-o:
+    ```bash
+    python -m venv env
+    source env/bin/activate  # Para Windows, use `env\Scripts\activate`
+    ```
+
+3. Instale as dependências:
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+## Uso
+
+1. Certifique-se de que a URL do arquivo CSV do Google Drive está correta no script `analise_pontuacoes.py`.
+
+2. Execute o script:
+    ```bash
+    python analise_pontuacoes.py
+    ```
+
+3. O script irá gerar histogramas, gráficos de dispersão e gráficos de barras das pontuações das linguagens de programação ao longo do tempo.
+
+## Resultados
+
+- Histogramas das pontuações de Python, Java e C++.
+- Gráficos de dispersão das pontuações ao longo do tempo.
+- Gráficos de barras das pontuações por semana.
+- Descrição estatística das pontuações.
+- Tendências temporais das pontuações.
+- Correlações entre as pontuações das diferentes linguagens.
+
+## Contribuição
+
+Contribuições são bem-vindas! Por favor, abra uma issue ou envie um pull request.
+
+## Licença
+
+Este projeto está licenciado sob os termos da licença MIT. Veja o arquivo `LICENSE` para mais detalhes.
+
+## Contato
+
+- Autor: Seu Nome
+- Email: seu-email@example.com
