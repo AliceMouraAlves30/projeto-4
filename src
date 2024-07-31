@@ -1,0 +1,156 @@
+importar  pandas  como  pd 
+importar  matplotlib.pyplot  como  plt
+
+# URL do arquivo CSV no Google Drive 
+url  =  "https://drive.google.com/uc?id=1ZPJ1lw7O9NQ31JBJqSrt85eykvt6lAoq"
+
+# Lendo o arquivo CSV diretamente do Google Drive 
+df  =  pd . read_csv ( url )
+
+# Convertendo a coluna 'Week' para o tipo datetime 
+df [ 'Week' ]  =  pd . to_datetime ( df [ 'Semana' ])
+
+# Visualização - Histograma 
+plt . figura ( figsize = ( 10 ,  6 )) 
+plt . hist ( df [ 'Python' ],  bins = 10 ,  alfa = 0,7 ,  rótulo = 'Python' ) 
+plt . hist ( df [ 'Java' ],  bins = 10 ,  alfa = 0,7 ,  rótulo = 'Java' ) 
+plt . hist ( df [ 'C++' ],  bins = 10 ,  alfa = 0,7 ,  rótulo = 'C++' ) 
+plt . title ( 'Distribuição das Pontuações' ) 
+plt . xlabel ( 'Pontuação' ) 
+plt . ylabel ( 'Frequência' ) 
+plt . legenda () 
+plt . mostrar ()
+
+# Visualização - Gráfico de Dispersão 
+plt . figura ( figsize = ( 10 ,  6 )) 
+plt . dispersão ( df [ 'Semana' ],  df [ 'Python' ],  rótulo = 'Python' ) 
+plt . dispersão ( df [ 'Semana' ],  df [ 'Java' ],  rótulo = 'Java' ) 
+plt . dispersão ( df [ 'Semana' ],  df [ 'C++' ],  rótulo = 'C++' ) 
+plt . title ( 'Pontuações ao Longo do Tempo' ) 
+plt . xlabel ( 'Semana' ) 
+plt . ylabel ( 'Pontuação' ) 
+plt . legenda () 
+plt . xticks ( rotação = 45 ) 
+plt . mostrar ()
+
+# Visualização - Gráfico de Barras 
+plt . figura ( figsize = ( 10 ,  6 )) 
+plt . bar ( df [ 'Semana' ],  df [ 'Python' ],  largura = 0,3 ,  rótulo = 'Python' ) 
+plt . bar ( df [ 'Semana' ]  +  pd . Timedelta ( dias = 7 ),  df [ 'Java' ],  largura = 0,3 ,  rótulo = 'Java' ) 
+plt . bar ( df [ 'Semana' ]  +  pd . Timedelta ( dias = 14 ),  df [ 'C++' ],  largura = 0,3 ,  rótulo = 'C++' ) 
+plt . title ( 'Pontuações por Semana' ) 
+plt . xlabel ( 'Semana' ) 
+plt . ylabel ( 'Pontuação' ) 
+plt . legenda () 
+plt . xticks ( rotação = 45 ) 
+plt.show ( )​
+No description has been provided for this image
+No description has been provided for this image
+No description has been provided for this image
+importar  pandas  como  pd 
+importar  matplotlib.pyplot  como  plt
+
+# URL do arquivo CSV no Google Drive 
+url  =  "https://drive.google.com/uc?id=1ZPJ1lw7O9NQ31JBJqSrt85eykvt6lAoq"
+
+# Lendo o arquivo CSV diretamente do Google Drive 
+df  =  pd . read_csv ( url )
+
+# Convertendo a coluna 'Week' para o tipo datetime 
+df [ 'Week' ]  =  pd . to_datetime ( df [ 'Semana' ])
+
+# Visualização - Histograma 
+plt . figura ( figsize = ( 10 ,  6 )) 
+plt . hist ( df [ 'Python' ],  bins = 10 ,  alfa = 0,7 ,  rótulo = 'Python' ) 
+plt . hist ( df [ 'Java' ],  bins = 10 ,  alfa = 0,7 ,  rótulo = 'Java' ) 
+plt . hist ( df [ 'C++' ],  bins = 10 ,  alfa = 0,7 ,  rótulo = 'C++' ) 
+plt . title ( 'Distribuição das Pontuações' ) 
+plt . xlabel ( 'Pontuação' ) 
+plt . ylabel ( 'Frequência' ) 
+plt . legenda () 
+plt . mostrar ()
+
+# Visualização - Gráfico de Dispersão 
+plt . figura ( figsize = ( 10 ,  6 )) 
+plt . dispersão ( df [ 'Semana' ],  df [ 'Python' ],  rótulo = 'Python' ) 
+plt . dispersão ( df [ 'Semana' ],  df [ 'Java' ],  rótulo = 'Java' ) 
+plt . dispersão ( df [ 'Semana' ],  df [ 'C++' ],  rótulo = 'C++' ) 
+plt . title ( 'Pontuações ao Longo do Tempo' ) 
+plt . xlabel ( 'Semana' ) 
+plt . ylabel ( 'Pontuação' ) 
+plt . legenda () 
+plt . xticks ( rotação = 45 ) 
+plt . mostrar ()
+
+# Visualização - Gráfico de Barras 
+plt . figura ( figsize = ( 10 ,  6 )) 
+plt . bar ( df [ 'Semana' ],  df [ 'Python' ],  largura = 0,3 ,  rótulo = 'Python' ) 
+plt . bar ( df [ 'Semana' ]  +  pd . Timedelta ( dias = 7 ),  df [ 'Java' ],  largura = 0,3 ,  rótulo = 'Java' ) 
+plt . bar ( df [ 'Semana' ]  +  pd . Timedelta ( dias = 14 ),  df [ 'C++' ],  largura = 0,3 ,  rótulo = 'C++' ) 
+plt . title ( 'Pontuações por Semana' ) 
+plt . xlabel ( 'Semana' ) 
+plt . ylabel ( 'Pontuação' ) 
+plt . legenda () 
+plt . xticks ( rotação = 45 ) 
+plt.show ( )​
+
+# Relatório 
+print ( "RELATÓRIO:" ) 
+print ( "----------" )
+
+# Descrição estatística das pontuações 
+print ( " \n Descrição Estatística das Pontuações:" ) 
+print ( df . description ())
+
+# Tendências temporais
+print("\nTendências Temporais:")
+print("Python:", df['Python'].mean())
+print("Java:", df['Java'].mean())
+print("C++:", df['C++'].mean())
+
+# Correlação entre as pontuações
+print("\nCorrelação entre as Pontuações:")
+correlation = df[['Python', 'Java', 'C++']].corr()
+print(correlation)
+
+# Dados Externos Relevantes
+print("\nDados Externos Relevantes:")
+print("Para uma análise mais aprofundada, seria útil ter informações sobre eventos externos que possam ter influenciado as pontuações.")
+
+# Análise Especializada
+print("\nAnálise Especializada:")
+print("Com base nos gráficos e análises estatísticas, podemos observar tendências nas pontuações ao longo do tempo para cada linguagem de programação. Também podemos identificar correlações entre as pontuações das diferentes linguagens e investigar possíveis razões por trás dessas tendências.")
+No description has been provided for this image
+No description has been provided for this image
+No description has been provided for this image
+RELATÓRIO:
+----------
+
+Descrição Estatística das Pontuações:
+                      Week      Python        Java         C++
+count                  262  262.000000  262.000000  262.000000
+mean   2021-10-20 12:00:00   68.965649   48.851145   19.290076
+min    2019-04-21 00:00:00   37.000000   28.000000   12.000000
+25%    2020-07-20 18:00:00   58.000000   44.000000   17.000000
+50%    2021-10-20 12:00:00   65.500000   48.000000   18.000000
+75%    2023-01-20 06:00:00   80.000000   54.000000   21.000000
+max    2024-04-21 00:00:00  100.000000   66.000000   31.000000
+std                    NaN   14.073519    6.925768    3.805599
+
+Tendências Temporais:
+Python: 68.96564885496183
+Java: 48.85114503816794
+C++: 19.290076335877863
+
+Correlação entre as Pontuações:
+          Python      Java       C++
+Python  1.000000  0.611552  0.850338
+Java    0.611552  1.000000  0.712494
+C++     0.850338  0.712494  1.000000
+
+Dados Externos Relevantes:
+Para uma análise mais aprofundada, seria útil ter informações sobre eventos externos que possam ter influenciado as pontuações.
+
+Análise Especializada:
+Com base nos gráficos e análises estatísticas, podemos observar tendências nas pontuações ao longo do tempo para cada linguagem de programação. Também podemos identificar correlações entre as pontuações das diferentes linguagens e investigar possíveis razões por trás dessas tendências.
+ 
